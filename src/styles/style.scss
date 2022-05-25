@@ -1,0 +1,42 @@
+/* Подключение шрифтов ====================================================================== */
+// &display=swap - поддержка кирилицы
+
+@import "https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Port+Lligat+Sans&display=swap";
+
+/* Подключение шрифтов файлом */
+// @import "fonts";
+
+// Шрифт по умолчанию =======================================================================//
+$fontFamily: "Montserrat Alternates", sans-serif;
+
+// Настройки ================================================================================//
+$container: 1170;
+$paddingContainer: 15;
+
+/* Обнуление ================================================================================ */
+@import "./null";
+
+/* Тело страницы ============================================================================ */
+body {
+	font-family: $fontFamily;
+}
+
+/* Оболочка ================================================================================= */
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+	background-color: #ede2e2;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+/* Контейнер ================================================================================ */
+[class*="__container"] {
+	max-width: calc($container + $paddingContainer * 2) + px;
+	margin: 0px auto;
+	padding: 0px $paddingContainer + px;
+}
