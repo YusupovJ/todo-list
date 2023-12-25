@@ -1,9 +1,8 @@
-const TodoInput = ({ emptyInput, input, setInput, addTodo, setEmptyInput }) => {
-	const keyDownHandler = (e) => {
-		if (e.code === "Enter") {
-			addTodo();
-		}
-	};
+import React, { useState } from "react";
+
+const TodoInput = (props) => {
+	const [input, setInput] = useState("");
+	const [emptyInput, setEmptyInput] = useState(false);
 
 	return (
 		<div className="todo__body">
@@ -15,11 +14,8 @@ const TodoInput = ({ emptyInput, input, setInput, addTodo, setEmptyInput }) => {
 				value={input}
 				onChange={(e) => setInput(e.target.value)}
 				placeholder="Add todo"
-				onKeyDown={keyDownHandler}
 			/>
-			<button onClick={addTodo} className="todo__add">
-				Add
-			</button>
+			<button className="todo__add">Add</button>
 		</div>
 	);
 };

@@ -127,6 +127,11 @@
 	display: flex;
 	justify-content: center;
 }
+.todo__count {
+	margin: 10px 0px 0px 0px;
+	font-weight: bold;
+	font-size: 20px;
+}
 @media only screen and (max-width: 767.98px) {
 	.todo__add {
 		border-radius: 10px;
